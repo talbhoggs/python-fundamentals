@@ -1,10 +1,15 @@
 # List
-# mutable list
 
+# Tuples
+
+# immutable list
+countries = ("China", "India")
+print(countries)
+
+# mutable list
 animals = ["pig", "cat", "dog"]
 
 # Adding removing values in a list
-
 animals.append("horse")
 print(animals)
 
