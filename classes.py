@@ -70,3 +70,16 @@ print(Vehicle.__base__)   # base class is object class
 print(FourWheel.__base__) # base class is Vehicle class
 
 
+class Animal:
+    # __init__ initailize a class
+    def __init__(self,value):
+        print("__init__ called")
+        self.value = value;
+
+    # __new__ instanciate a class 
+    def __new__(cls, *args, **kwargs):
+        print("__new__ called")
+        instance = super().__new__(cls)
+        return instance
+
+obj = Animal("BOo")
