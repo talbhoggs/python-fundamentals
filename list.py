@@ -52,3 +52,9 @@ print(f"sum {sum(list_numbers)}")
 # List comprehension
 list_numbers = [value for value in range(11, 20)]
 print(list_numbers)
+
+
+# Set does not allow duplicate
+my_set = {"charles", "eric", "test", "eric"}
+my_set.add("will")
+my_set.remove("charles")

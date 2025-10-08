@@ -67,6 +67,13 @@ elif temperature <= 38 and temperature >= 32:
 else:
     print("too cold")
 
+# None
+# No value
+var_none = None
+if var_none is None:
+    print("Variable has no value")
+
+
 # Type casting
 num = 10
 str_num = str(num)
