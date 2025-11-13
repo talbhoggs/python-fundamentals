@@ -9,12 +9,16 @@ person ={"name":"Charles", "age": 28, "city": "Talisay"}
 age = person["age"]
 name = person.get("name")
 
+print(f"age = {age}")
+print(f"name = {name}")
 print(person)
 
 # modify
 person["age"] = 44
 person.pop("city")
 # person.popitem() pop the last item
+
+# remove item
 del person["age"]
 # person.clear()
 print(person)
@@ -38,7 +42,7 @@ company_employees = {
 }
 
 for position, person in company_employees.items():
-    print(f"position: {position} \nname: {person.get("name")}")
+    print(f"position: {position} name: {person.get('name')}")
     
 # dictionary with list inside
 students = {
