@@ -1,14 +1,21 @@
-
+#import all module
 import arthimetic;
-import arthimetic as math
-from arthimetic import add, sub
+result_add= arthimetic.add(2,3)
+result_sub= arthimetic.sub(4,3)
+print(result_add)
+print(result_sub)
 
-#result = arthimetic.add(2,3)
+#import as alias
+import math as m
+print(m.sin(30))
+print(m.tan(30))
 
-#result = math.add(2,5)
+#import specific
+#from arthimetic import add, sub
+#print(add(6,6))
+#print(sub(5,2))
 
-result = add(6,6)
-print(result)
-
-result= sub(5,2)
-print(result)
+#import asterix *
+#from arthimetic import *
+#print(add(6,6))
+#print(sub(5,2))
