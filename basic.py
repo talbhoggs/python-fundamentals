@@ -8,35 +8,39 @@ _var_ma = "test"
 # Number
 # Whole number
 w_num1 = 12
-w_num2 = 2
+w_num2: int = 2 # type anotation
+                # we can eplicitly add the type but optional
 
-print(w_num1 + w_num2)
-print(w_num1 - w_num2)
-print(w_num1 // w_num2)
-print(w_num1 * w_num2)
-print(w_num1 ** w_num2)
-print(w_num1 % w_num2)
+print("Arthimetics : ##########")
+print(f'''{w_num1} + {w_num2} = {w_num1 + w_num2}''')
+print(f'''{w_num1} - {w_num2} = {w_num1 - w_num2}''')
+print(f'''{w_num1} // {w_num2} = {w_num1 // w_num2}''')
+print(f'''{w_num1} * {w_num2} = {w_num1 * w_num2}''')
+print(f'''{w_num1} ** {w_num2} = {w_num1 ** w_num2}''')
+print(f'''{w_num1} % {w_num2} = {w_num1 % w_num2}''')
 
 # Float
 w_num_f = 12.3
-
+print(f'''Float {w_num_f}''')
 # complex
 var_com = 4 + 3j
+print("######## Complex number #########")
 print(var_com.real)
 print(var_com.imag)
 print(var_com)
 
 # Strings
+print("########## String ##################")
 my_number = 1
 my_comment = f'''This multi comment is a comment {my_number}'''
 my_comment1 = f'This is {my_number} value'
-
 print("Hello")
 print(my_comment)
 print(my_comment1)
 
 # if else, elif, in keyword
 # immutable list
+print("############### if else / elif ###################")
 countries = ("China", "India")
 print(countries)
 if "China" in countries:
@@ -73,7 +77,6 @@ var_none = None
 if var_none is None:
     print("Variable has no value")
 
-
 # Type casting
 num = 10
 str_num = str(num)
@@ -90,6 +93,8 @@ print(type(str_num))
 # ternary
 name = "Charles" 
 value = name if name else "No name"
+print("####### ternary #######")
+print("name if name else \"No name\"")
 print(value)
 
 # inputs
@@ -97,8 +102,10 @@ name = input(f"What is your name?")
 age = int(input(f"Please type your age."))
 print(f"Your name is {name} your age {age}")
 
-from mypackage import square
-print(square())
+
+from mypackage.math_utils import square
+print("######## importing a package #####")
+print(f'''square of 4 = {square()}''')
 
 # decorator
 # a function that takes another function as input and returns a new function with added behavior
