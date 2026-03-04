@@ -107,6 +107,24 @@ from mypackage.math_utils import square
 print("######## importing a package #####")
 print(f'''square of 4 = {square()}''')
 
+
+# *args, **kwargs
+# *args accepts list
+# *kwargs accepts dictionary
+def order_food(item, *args, **kwargs)->None:
+    print("Item : ", item)
+    print("Extras : ", args)
+    print("Details : ", kwargs)
+
+# correct approach
+order_food("Pizza","Cheese","Hotdog",delivery=True, tip=10)
+
+item = "Pizza"
+extras = ["Olives, Pepper"]
+details = {"delivery": False, "tip": 3}
+# not correct
+order_food(item, extras, details)
+
 # decorator
 # a function that takes another function as input and returns a new function with added behavior
 def logger(func):
