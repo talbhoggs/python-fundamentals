@@ -1,0 +1,92 @@
+[
+  {
+    "book_id": 1,
+    "isbn": "9780747532743",
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "year": 1997,
+    "status": "available"
+  },
+  {
+    "book_id": 2,
+    "isbn": "9780747532743",
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "year": 1997,
+    "status": "available"
+  },
+  {
+    "book_id": 3,
+    "isbn": "9780439064873",
+    "title": "Harry Potter and the Chamber of Secrets",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "year": 1998,
+    "status": "available"
+  },
+  {
+    "book_id": 4,
+    "isbn": "9780061120084",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "year": 1960,
+    "status": "available"
+  },
+  {
+    "book_id": 5,
+    "isbn": "9780451524935",
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "year": 1949,
+    "status": "available"
+  },
+  {
+    "book_id": 6,
+    "isbn": "9780140449266",
+    "title": "The Odyssey",
+    "author": "Homer",
+    "genre": "Classic",
+    "year": -800,
+    "status": "available"
+  },
+  {
+    "book_id": 7,
+    "isbn": "9780307277671",
+    "title": "The Road",
+    "author": "Cormac McCarthy",
+    "genre": "Post-apocalyptic",
+    "year": 2006,
+    "status": "available"
+  },
+  {
+    "book_id": 8,
+    "isbn": "9780143127741",
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "genre": "Science Fiction",
+    "year": 2011,
+    "status": "available"
+  },
+  {
+    "book_id": 9,
+    "isbn": "9780307387899",
+    "title": "The Girl with the Dragon Tattoo",
+    "author": "Stieg Larsson",
+    "genre": "Thriller",
+    "year": 2005,
+    "status": "available"
+  },
+  {
+    "book_id": 10,
+    "isbn": "9781593275990",
+    "title": "Automate the Boring Stuff with Python",
+    "author": "Al Sweigart",
+    "genre": "Programming",
+    "year": 2015,
+    "status": "available"
+  }
+]
