@@ -3,6 +3,27 @@ from typing import NewType, TypedDict, Any, TypeVar
 from dataclasses import dataclass
 import random
 
+# TypedDict
+# - behaves like dict
+# - great for JSON
+# - no methods
+# - no validation
+# - lightweight
+# - best for static data structures
+
+# Dataclass
+# - real Python class
+# - supports methods
+# - supports default values, immutability
+# - no runtime validation
+# - best for internal logic
+
+# Pydantic
+# - real class + validation
+# - converts types automatically
+# - heavier and more powerful
+# - best for APIs and data input
+
 # Working method that don't have type hint at the output
 def create_employee(first_name:str, last_name:str, age:int | None) -> dict: 
     email = f"{first_name}-{last_name}@company.com"
