@@ -37,8 +37,14 @@ text = file.read_text()
 print(text)
 
 # using with in reading and writing files
-with Path.open("read.txt", "r") as read_txt:
-    print(f"---> {read_txt.read()}")
+#with Path.open("read.txt", "r") as read_txt:
+#    print(f"---> {read_txt.read()}")
 
-with Path.open("read.txt", "w") as write_txt:
-    content = write_txt.write("Yes Yes Yes")
+#with Path.open("read.txt", "w") as write_txt:
+#    content = write_txt.write("Yes Yes Yes")
+
+p = Path("read.txt")
+with p.open("r") as read_txt:
+    print(f"---> {read_txt.read()}")
+with p.open("w") as write_txt:
+    write_txt.write("Yes Yes Yes")

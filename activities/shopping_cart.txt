@@ -1,0 +1,96 @@
+CLASS Product
+    id
+    name
+    price
+
+CLASS CartItem
+    product
+    quantity
+
+CLASS ShoppingCart
+    items : list of CartItem
+
+    METHOD add_item(product, qty)
+    METHOD remove_item(product_id)
+    METHOD update_quantity(product_id, qty)
+    METHOD calculate_total()
+    METHOD display_cart()
+
+WHILE True:
+    DISPLAY menu:
+        1. View Products
+        2. Add to Cart
+        3. Remove from Cart
+        4. Update Quantity
+        5. View Cart
+        6. Checkout
+        7. Exit
+
+    GET user choice
+
+    IF choice == 1:
+        DISPLAY all products
+
+    ELSE IF choice == 2:
+        ASK for product_id
+        ASK for quantity
+        FIND product in product list
+        IF found:
+            cart.add_item(product, quantity)
+        ELSE:
+            PRINT "Product not found"
+
+    ELSE IF choice == 3:
+        ASK for product_id
+        cart.remove_item(product_id)
+
+    ELSE IF choice == 4:
+        ASK for product_id
+        ASK for new quantity
+        cart.update_quantity(product_id, quantity)
+
+    ELSE IF choice == 5:
+        cart.display_cart()
+
+    ELSE IF choice == 6:
+        total = cart.calculate_total()
+        DISPLAY total
+        ASK "Confirm checkout? (y/n)"
+        IF yes:
+            PRINT "Thank you for your purchase!"
+            BREAK loop
+
+    ELSE IF choice == 7:
+        PRINT "Goodbye!"
+        BREAK loop
+
+    ELSE:
+        PRINT "Invalid choice"
+
+METHOD add_item(product, qty):
+    FOR each item in items:
+        IF item.product.id == product.id:
+            item.quantity += qty
+            RETURN
+    ADD new CartItem(product, qty) to items
+
+METHOD remove_item(product_id):
+    REMOVE any item where item.product.id == product_id
+
+METHOD update_quantity(product_id, qty):
+    FOR each item in items:
+        IF item.product.id == product_id:
+            item.quantity = qty
+            RETURN
+METHOD calculate_total():
+    total = 0
+    FOR each item in items:
+        total += item.product.price * item.quantity
+    RETURN total
+METHOD display_cart():
+    IF items empty:
+        PRINT "Cart is empty"
+    ELSE:
+        FOR each item in items:
+            PRINT product name, price, quantity, subtotal
+        PRINT total

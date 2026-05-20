@@ -83,3 +83,81 @@ class Animal:
         return instance
 
 obj = Animal("BOo")
+
+
+# property decorator
+# a way to give setter and getter in python
+
+class Employee:
+
+    def __init__(self, id:int, name:str, is_active:bool):
+        self._id = id
+        self._name = name
+        self._is_active = is_active
+
+    @property
+    def id(self):
+        return self._id
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter 
+    def name(self, name):
+        self._name = name
+
+    @property 
+    def is_active(self):
+        return self._is_active
+
+    @is_active.setter
+    def is_active(self, is_active):
+        self._is_active = is_active
+
+    def __str__(self):
+        return f"{self.name} - {self.is_active}"
+
+em_joy = Employee(id=1,name="joy",is_active=False)
+em_charles = Employee(id=2,name="Charles",is_active=True)
+
+print(em_joy)
+print(em_charles)
+
+from dataclasses import dataclass
+
+# dataclass
+# with property and setter
+
+@dataclass
+class Employee2:
+    _id:int
+    _name:str
+    _is_active:bool
+
+    @property
+    def id(self)->int:
+        return self._id
+
+    @id.setter
+    def id(self,id:int):
+        self._id = id
+     
+    @property
+    def name(self)->str:
+        return self._name
+
+    @property 
+    def is_active(self)->bool:
+        return self._is_active
+
+    @is_active.setter 
+    def is_active(self, is_active:bool):
+        self._is_active = is_active
+
+
+em_will = Employee2(_id=1,_name="will",_is_active=False)
+em_lexie = Employee2(_id=2,_name="lexie",_is_active=True)
+
+print(em_will)
+print(em_lexie)
